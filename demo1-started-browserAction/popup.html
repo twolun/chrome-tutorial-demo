@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="div">divdividvi</div>
+
+<script type="text/javascript">
+	window.onload= function(){
+		'use strict';
+		// console.log(document.querySelector('#div'))
+		// document.querySelector('#div').addEventListener('click', function(){
+		// 	console.log(1111111111)
+		// })
+		
+		// var obj = {
+		// 	m: function(){
+		// 		console.log(this);
+		// 		console.log(arguments)
+		// 	}
+		// }
+
+		// var objB = new obj.m();
+
+		// function testFun(a, b){
+		// 	console.log(arguments);
+		// 	// arguments.join(',');
+		// 	var res = Array.prototype.join.call(arguments, '---');
+		// 	arguments.caller;
+		// 	console.log(res)
+		// }
+
+		// testFun(1,2);
+
+	// 	uniqueInteger.counter = 0;
+	// 	function uniqueInteger(n){
+	// 		// if(isFinite(n) && n>0 && n==Math.round(n)){
+	// 		// 	if(!(n in factorial)){
+	// 		// 		factorial[n] = n * factorial(n-1);
+	// 		// 		return factorial[n];
+	// 		// 	}
+	// 		// }
+	// 		return uniqueInteger.counter++;
+	// 	}
+
+	// 	console.log(uniqueInteger(1))
+	// 	console.log(uniqueInteger(10))
+	// }
+	function factorial(n){
+		if(isFinite(n) && n>0 && n==Math.round(n)){
+			if(!(n in factorial)){
+				factorial[n] = n * factorial(n-1);
+			}else{
+				return factorial[n];				
+			}
+		}else{
+			return NaN;
+		}
+	}
+
+	factorial[1] = 1;
+	factorial(2);
+	factorial(3);
+	factorial(4);
+	factorial(5);
+	factorial(6);
+
+	console.log(factorial[6]);
+}
+</script>
+</body>
+</html>
